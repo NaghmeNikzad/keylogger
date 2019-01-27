@@ -62,9 +62,9 @@ namespace Server
                 message += Encoding.ASCII.GetString(data, 0, recByteLength);
 
                 // until victim send eof flag
-                if (message.IndexOf("<EOF>") > -1)
+                if (message.IndexOf("<EOF>\n") > -1)
                 {
-                    message = Regex.Replace(message, "<EOF>", "");
+                    message = Regex.Replace(message, "<EOF>\n", "");
 
                     callback(message, victimSocket);
                     message = "";

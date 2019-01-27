@@ -50,8 +50,10 @@
             // 
             // loggerTxt
             // 
+            this.loggerTxt.AutoWordSelection = true;
             this.loggerTxt.BackColor = System.Drawing.SystemColors.Desktop;
             this.loggerTxt.ForeColor = System.Drawing.SystemColors.Window;
+            this.loggerTxt.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.loggerTxt.Location = new System.Drawing.Point(244, 12);
             this.loggerTxt.Name = "loggerTxt";
             this.loggerTxt.ReadOnly = true;

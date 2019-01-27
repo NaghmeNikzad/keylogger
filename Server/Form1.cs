@@ -51,10 +51,14 @@ using System.IO;
                 {
                     case "VictimMessage":
                         loggerTxt.Text += log_text;
+                        loggerTxt.SelectionStart = loggerTxt.Text.Length;
+                        loggerTxt.ScrollToCaret();
                         break;
                     case "ServerLog":
                         networkLogsTxt.Text += log_text;
                         networkLogsTxt.Text += "\n";
+                        networkLogsTxt.SelectionStart = networkLogsTxt.Text.Length;
+                        networkLogsTxt.ScrollToCaret();
                         break;
                 }
             }
@@ -66,7 +70,7 @@ using System.IO;
             if (victimMessage == "check")
             {
                 victimSocket.Send(Encoding.ASCII.GetBytes("connected<EOF>"));
-                addLog("Victim connection test message.", "ServerLog");
+                addLog("Victim is connected.", "ServerLog");
             }
             else
             {

@@ -10,10 +10,10 @@
 
 /** VICTIM CONFIGS **/
 
-#define INFECTION_PATH "E:\system data" //for example
+#define CONNECTION_CHECKING_INTERVAL 10 * 1000 // in miliseconds
 
-#define CONNECTION_CHECKING_INTERVAL 10 // in seconds
+#define CONECTING_RETRY_DELAY 10 // in miliseconds
 
-#define CONECTING_RETRY_DELAY 10 // in seconds
+#define MINIMUM_SENDING_CAPTURED_LENGTH 10 // when captured  data length is lower than this size client should not send it
 
 #endif

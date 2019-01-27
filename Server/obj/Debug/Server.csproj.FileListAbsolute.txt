@@ -1,0 +1,9 @@
+C:\Users\USER\Desktop\Project End\Server\bin\Debug\Server.exe.config
+C:\Users\USER\Desktop\Project End\Server\bin\Debug\Server.exe
+C:\Users\USER\Desktop\Project End\Server\bin\Debug\Server.pdb
+C:\Users\USER\Desktop\Project End\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+C:\Users\USER\Desktop\Project End\Server\obj\Debug\Server.mainForm.resources
+C:\Users\USER\Desktop\Project End\Server\obj\Debug\Server.Properties.Resources.resources
+C:\Users\USER\Desktop\Project End\Server\obj\Debug\Server.csproj.GenerateResource.Cache
+C:\Users\USER\Desktop\Project End\Server\obj\Debug\Server.exe
+C:\Users\USER\Desktop\Project End\Server\obj\Debug\Server.pdb

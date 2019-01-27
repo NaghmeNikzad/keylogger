@@ -2,12 +2,10 @@
 #define DEFINITIONS_HEADER
 
 #define _CRT_SECURE_NO_WARNINGS 1
-#define DEBUG
-
-/** CONSTANS **/
 
 
-/** OTHER CONSTANTS **/
+#define DEBUG  
+
 
 #define LOG_LINE "LOG_LINE"
 

@@ -98,7 +98,7 @@ bool sendMessage(SOCKET ConnectSocket, char* message) {
 	char sendbuf[1024];
 
 	strcpy(sendbuf, message);
-	strcat(sendbuf, "<EOF>");
+	strcat(sendbuf, "<EOF>\n");
 
 	int iResult;
 
@@ -118,10 +118,11 @@ bool sendMessage(SOCKET ConnectSocket, char* message) {
 
 bool checkConnection(SOCKET sock) {
 
-	char buff[16] = "check<EOF>";
-	int res  = send(sock, buff, strlen(buff), 0);
+	char buff[16] = "check<EOF>\n";
+	
+	int res  = send(sock, buff, (int) strlen(buff), 0);
 	int res2 = WSAGetLastError();
-	int ret = recv(sock, buff, sizeof(buff)/sizeof(char) - 1, MSG_PEEK);
+	int ret = recv(sock, buff, sizeof(buff)/sizeof(char) - 1, 0);
 	if ( ret == SOCKET_ERROR ) 
 	{
 		log("Disconnected!");
